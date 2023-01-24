@@ -1,5 +1,6 @@
 #define APPLICATION_DEF
 #include "engine.h"
+#include "tile.h"
 
 using namespace std;
 
@@ -10,10 +11,20 @@ public:
     }
 
 private:
-
 public:
+	void fill_map(Tile[16][16]& map) {
+		for(int y = 0; y < 16; y++)
+			for(int x = 0; x < 16; x++)
+				map[x][y] = new Tile(x, y, "/");
+	}
+	Tile[16][16] selection_map;
+	Tile[16][16] ground_map;
+	Tile[16][16] collision_map;
+
 	bool on_create() override {
-		
+		fill_map();
+		fill_map();
+		fill_map();
 		return true;
 	}
 
