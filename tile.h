@@ -3,8 +3,8 @@
 class Tile {
 private:
     int_vector_2d pos;
-    std::string sprite_path;
 public:
+    std::string sprite_path;
     Tile(int x, int y, std::string path) {
         pos.x = x;
         pos.y = y;
